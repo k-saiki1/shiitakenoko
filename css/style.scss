@@ -82,13 +82,42 @@ a {
 .mainvisual {
   width: 100%;
   height: 595px;
-  background-image: url(../images/background-img.png);
+  background-image: url(../images/background.png);
   background-repeat: no-repeat;
   background-size: cover;
-  display: flex;
-  justify-content: center;
-  &__img {
+  position: relative;
+  &__container1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+  }
+  &__container2 {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    max-width: 1050px;
+    margin: 0 auto;
+
+
+  }
+  &__img1 {
     height: 595px;
+    z-index: 1;
+  }
+  &__img2 {
+    margin-top: 100px;
+    height: 400px;
+    z-index: 3;
+  }
+  &__img3 {
+    margin-top: 200px;
+    height: 450px;
+    z-index: 2;
   }
 }
 .menu {
@@ -701,6 +730,31 @@ a {
         transform: translateY(-6.2px) rotate(45deg);
       }
     }
+  }
+  .mainvisual {
+    &__container1 {
+      display: none;
+    }
+    &__container2 {
+      display: none;
+    }
+    &__container3 { 
+      width: 100%;
+      height: 595px;
+      // display: flex;
+      // flex-wrap: nowrap;
+      // justify-content: space-between;
+      // max-width: 1050px;
+      // margin: 0 auto;
+  
+  
+      background-image: url(../images/title.png),url(../images/boy.png),url(../images/girl.png);
+      background-repeat: no-repeat;
+      background-position: top 220px left -110px, top 180px right -170px, top 0px center;
+      z-index: 4;
+    }
+
+
   }
   .news-top {
     width: 100%;
