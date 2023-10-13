@@ -137,48 +137,53 @@ a {
   }
 }
 .event {
+  // border: 10px solid #bebebe;
+  &__texture {
+    margin-top: -25px;
+    font-family: 'Oooh Baby', cursive;
+    font-size: 139px;
+    font-weight: bold;
+    color: rgb(234,137,136,0.19);
+    letter-spacing: 7px;
+  }
   &__title {
-    height: 469px;
-
-    border: solid 1px #D9D9D9;
+    margin-top: -80px;
+    font-size: 32px;
+    color: #3E0000;
+    text-align: center;
+    font-weight: bold;
+  }
+  &__container {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  &__img1 {
+    width: 282.22px;
+    height: 400px;
+    object-fit: cover;
+  }
+  &__img2 {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
   }
   &__description {
-    font-family:"HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
-    background-color: #EA8988;
-    padding: 12px;
-    &-upper {
-      display: flex;
-    }
-  }
-  &__category {
     width: fit-content;
-    padding: 0px 9px;
-    height: 32px;
-    font-size: 12.8px;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    background-color: #c2c2c2;
-    border-radius: 4px;
-    color: #ffffff;
-  }
-  &__date {
-    width: fit-content;
-    padding: 0px 15px;
-    height: 32px;
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    color: #ffffff;
+    margin-top: 30px;
+    min-width: 0;
   }
   &__text {
-    margin-top: 10px;
-    color: #ffffff;
-    font-size: 18px;
-    font-weight: bold;
+    color: #3E0000;
+    font-size: 16px;
+    line-height: 2;
   }
+
 }
 .info {
+  margin-top: 45px;
   &__title {
     font-family: 'Oooh Baby', cursive;
     font-size: 48px;
@@ -204,7 +209,21 @@ a {
     padding-top: 30px;
     padding-bottom: 8px;
     border-bottom: solid 2px #D9D9D9;
-    height: 98px;
+    &-upper {
+      display: flex;
+      align-items: center;
+    }
+  }
+  &__category {
+    width: fit-content;
+    padding: 0px 3px;
+    height: 22px;
+    font-size: 12.8px;
+    display: flex;
+    align-items: center;
+    background-color: #EA8988;
+    border-radius: 4px;
+    color: #ffffff;
   }
   &__date {
     width: fit-content;
@@ -221,24 +240,31 @@ a {
     font-size: 16px;
     font-weight: bold;
   }
+  &__text2 {
+    margin-top: 10px;
+    color: #3E0000;
+    font-size: 14px;
+    line-height: 1.6;
+  }
 }
 .profile {
   width: 100%;
-  max-width: 1104px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 100px 20px 0px 20px;
   &__title {
     font-family: 'Oooh Baby', cursive;
-    font-size: 65px;
+    font-size: 70px;
     color: #EA8988;
     font-weight: bold;
     display: flex;
     align-items: center;
     text-shadow: 0px 4px 4px rgb(0,0,0,0.19);
-    margin-left: 50px;
+    margin-left: 30px;
+    letter-spacing: 1px;
   }
   &__container {
-    margin-top: -10px;
+    margin-top: -20px;
     // height: 466px;
     background-color: #FFE0D8;
     border: solid 4px  #3E0000;
@@ -247,18 +273,64 @@ a {
     padding: 6px;
   }
   &__container2 {
-    // height: 446px;
     background-color: #FFE0D8;
     border: solid 1px  #3E0000;
     border-radius: 24px;
     z-index: 10;
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
   }
   &__img {
-    margin-left: 100px;
+    // margin-left: 100px;
     margin-top: 30px;
     margin-bottom: 30px;
     height: 412px;
   }
+  &__description {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 60px 0;
+  }
+  &__text {
+    &-1 {
+      width: fit-content;
+      color: #000000;
+      font-size: 48px;
+      font-family: 'Anonymous Pro';
+    }
+    &-2 {
+      color: #000000;
+      font-size: 22px;
+      width: fit-content;
+      margin-top: 7px;
+    }
+    &-3 {
+      color: #000000;
+      font-size: 16px;
+      width: fit-content;
+      margin-top: 32px;
+      line-height: 32px;
+    }
+    &-4 {
+      color: #000000;
+      font-size: 16px;
+      width: fit-content;
+      text-decoration: underline;
+      margin-top: 28px;
+      margin-bottom: 4px;
+    }
+    &-5 {
+      color: #000000;
+      font-size: 14px;
+      width: fit-content;
+      text-decoration: underline;
+      line-height: 26px;
+    }
+  }
+
 }
 .works {
   padding: 100px 20px 0px 20px;
@@ -508,7 +580,7 @@ a {
     display: flex;
     flex-wrap: nowrap;
     &-item {
-      height: 60px;
+      height: 50px;
       border-radius: 50%;
       position: relative;
       margin: 0px 3px;
@@ -644,10 +716,32 @@ a {
   }
   .event {
     margin-top: 50px;
+    &__container {
+      flex-wrap: wrap;
+    }
+    &__texture {
+      margin-top: -25px;
+      font-family: 'Oooh Baby', cursive;
+      font-size: 65px;
+      // font-weight: bold;
+      color: #EA8988;
+      letter-spacing: 7px;
+      text-align: center;
+      text-shadow: 0px 4px 4px rgb(0,0,0,0.1);
+    }
+    &__title {
+      margin-top: 0px;
+      font-size: 32px;
+      color: #3E0000;
+      text-align: center;
+      font-weight: bold;
+    }
   }
   .info {
     &__title {
+      width: 100%;
       font-size: 28px;
+      justify-content: center;
     }
   }
   .menu {
@@ -666,6 +760,54 @@ a {
       margin-left: 0px;
       height: auto;
       width: 100%;
+    }
+    &__container2 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    &__description {
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0px 0 60px 0;
+    }
+    &__text {
+      &-1 {
+        width: fit-content;
+        color: #000000;
+        font-size: 28px;
+        font-family: 'Anonymous Pro';
+      }
+      &-2 {
+        color: #000000;
+        font-size: 18px;
+        width: fit-content;
+        margin-top: 7px;
+      }
+      &-3 {
+        color: #000000;
+        font-size: 14px;
+        width: fit-content;
+        margin-top: 32px;
+        line-height: 32px;
+      }
+      &-4 {
+        color: #000000;
+        font-size: 14px;
+        width: fit-content;
+        text-decoration: underline;
+        margin-top: 28px;
+        margin-bottom: 4px;
+      }
+      &-5 {
+        color: #000000;
+        font-size: 12.8px;
+        width: fit-content;
+        text-decoration: underline;
+        line-height: 26px;
+      }
     }
   }
   .works {

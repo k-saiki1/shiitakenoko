@@ -144,48 +144,55 @@ a:hover {
   gap: 42px;
 }
 
+.event__texture {
+  margin-top: -25px;
+  font-family: "Oooh Baby", cursive;
+  font-size: 139px;
+  font-weight: bold;
+  color: rgba(234, 137, 136, 0.19);
+  letter-spacing: 7px;
+}
 .event__title {
-  height: 469px;
-  border: solid 1px #D9D9D9;
+  margin-top: -80px;
+  font-size: 32px;
+  color: #3E0000;
+  text-align: center;
+  font-weight: bold;
+}
+.event__container {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  margin-top: 30px;
+}
+.event__img1 {
+  width: 282.22px;
+  height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.event__img2 {
+  width: 200px;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .event__description {
-  font-family: "HG丸ｺﾞｼｯｸM-PRO", "HGMaruGothicMPRO";
-  background-color: #EA8988;
-  padding: 12px;
-}
-.event__description-upper {
-  display: flex;
-}
-.event__category {
   width: -moz-fit-content;
   width: fit-content;
-  padding: 0px 9px;
-  height: 32px;
-  font-size: 12.8px;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  background-color: #c2c2c2;
-  border-radius: 4px;
-  color: #ffffff;
-}
-.event__date {
-  width: -moz-fit-content;
-  width: fit-content;
-  padding: 0px 15px;
-  height: 32px;
-  font-size: 14px;
-  display: flex;
-  align-items: center;
-  color: #ffffff;
+  margin-top: 30px;
+  min-width: 0;
 }
 .event__text {
-  margin-top: 10px;
-  color: #ffffff;
-  font-size: 18px;
-  font-weight: bold;
+  color: #3E0000;
+  font-size: 16px;
+  line-height: 2;
 }
 
+.info {
+  margin-top: 45px;
+}
 .info__title {
   font-family: "Oooh Baby", cursive;
   font-size: 48px;
@@ -210,7 +217,22 @@ a:hover {
   padding-top: 30px;
   padding-bottom: 8px;
   border-bottom: solid 2px #D9D9D9;
-  height: 98px;
+}
+.info__description-upper {
+  display: flex;
+  align-items: center;
+}
+.info__category {
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0px 3px;
+  height: 22px;
+  font-size: 12.8px;
+  display: flex;
+  align-items: center;
+  background-color: #EA8988;
+  border-radius: 4px;
+  color: #ffffff;
 }
 .info__date {
   width: -moz-fit-content;
@@ -228,25 +250,32 @@ a:hover {
   font-size: 16px;
   font-weight: bold;
 }
+.info__text2 {
+  margin-top: 10px;
+  color: #3E0000;
+  font-size: 14px;
+  line-height: 1.6;
+}
 
 .profile {
   width: 100%;
-  max-width: 1104px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 100px 20px 0px 20px;
 }
 .profile__title {
   font-family: "Oooh Baby", cursive;
-  font-size: 65px;
+  font-size: 70px;
   color: #EA8988;
   font-weight: bold;
   display: flex;
   align-items: center;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.19);
-  margin-left: 50px;
+  margin-left: 30px;
+  letter-spacing: 1px;
 }
 .profile__container {
-  margin-top: -10px;
+  margin-top: -20px;
   background-color: #FFE0D8;
   border: solid 4px #3E0000;
   border-radius: 32px;
@@ -258,12 +287,60 @@ a:hover {
   border: solid 1px #3E0000;
   border-radius: 24px;
   z-index: 10;
+  display: flex;
+  justify-content: center;
+  padding: 0 20px;
 }
 .profile__img {
-  margin-left: 100px;
   margin-top: 30px;
   margin-bottom: 30px;
   height: 412px;
+}
+.profile__description {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 60px 0;
+}
+.profile__text-1 {
+  width: -moz-fit-content;
+  width: fit-content;
+  color: #000000;
+  font-size: 48px;
+  font-family: "Anonymous Pro";
+}
+.profile__text-2 {
+  color: #000000;
+  font-size: 22px;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-top: 7px;
+}
+.profile__text-3 {
+  color: #000000;
+  font-size: 16px;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-top: 32px;
+  line-height: 32px;
+}
+.profile__text-4 {
+  color: #000000;
+  font-size: 16px;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-decoration: underline;
+  margin-top: 28px;
+  margin-bottom: 4px;
+}
+.profile__text-5 {
+  color: #000000;
+  font-size: 14px;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-decoration: underline;
+  line-height: 26px;
 }
 
 .works {
@@ -516,7 +593,7 @@ a:hover {
   flex-wrap: nowrap;
 }
 .footer__sns-item {
-  height: 60px;
+  height: 50px;
   border-radius: 50%;
   position: relative;
   margin: 0px 3px;
@@ -654,8 +731,29 @@ a:hover {
   .event {
     margin-top: 50px;
   }
+  .event__container {
+    flex-wrap: wrap;
+  }
+  .event__texture {
+    margin-top: -25px;
+    font-family: "Oooh Baby", cursive;
+    font-size: 65px;
+    color: #EA8988;
+    letter-spacing: 7px;
+    text-align: center;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  }
+  .event__title {
+    margin-top: 0px;
+    font-size: 32px;
+    color: #3E0000;
+    text-align: center;
+    font-weight: bold;
+  }
   .info__title {
+    width: 100%;
     font-size: 28px;
+    justify-content: center;
   }
   .menu {
     display: none;
@@ -672,6 +770,57 @@ a:hover {
     margin-left: 0px;
     height: auto;
     width: 100%;
+  }
+  .profile__container2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .profile__description {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px 0 60px 0;
+  }
+  .profile__text-1 {
+    width: -moz-fit-content;
+    width: fit-content;
+    color: #000000;
+    font-size: 28px;
+    font-family: "Anonymous Pro";
+  }
+  .profile__text-2 {
+    color: #000000;
+    font-size: 18px;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-top: 7px;
+  }
+  .profile__text-3 {
+    color: #000000;
+    font-size: 14px;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-top: 32px;
+    line-height: 32px;
+  }
+  .profile__text-4 {
+    color: #000000;
+    font-size: 14px;
+    width: -moz-fit-content;
+    width: fit-content;
+    text-decoration: underline;
+    margin-top: 28px;
+    margin-bottom: 4px;
+  }
+  .profile__text-5 {
+    color: #000000;
+    font-size: 12.8px;
+    width: -moz-fit-content;
+    width: fit-content;
+    text-decoration: underline;
+    line-height: 26px;
   }
   .works__title {
     text-align: center;
